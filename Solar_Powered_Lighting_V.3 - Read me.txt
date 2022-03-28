@@ -1,0 +1,9 @@
+In this version, two additional functions have been added into the "updateBattStatus" 
+
+The first additional function is... The calculation of "discharged C rate" function, which is used to determine the amount of discharging current flowing out of battery and tells the users that how deep the battery is being discharged.
+
+The second function is... The calculation of SOC and DoD of the batttey while it is being charged and discharged respectively. These parameters will be used to shutdown battery operation and notify users in case of emergency.
+
+The problem I get stucked right now is, I still can't figure out how to map my calculated SOC and DoD into the look-up table I implemented in the code as an coordinate array. 
+
+According to my timeline, the battery update functions are SW2.1, SW2.2 and SW2.3, which must be finished within week5 (28 mar to 4 April) So, if I could finish the function of SOC/DoD and look-up table mapping, it would cover 90% of these functions.  
