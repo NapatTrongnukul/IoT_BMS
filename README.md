@@ -25,4 +25,22 @@ Week 4: Mar 21 - Mar 28
   What I've done: Created two functions on arduino to determine the operation mode of battery and to make an look-up table of battery voltage VS SoC, to determine the battery voltage with respective to a certain value of SoC.
   Results: two function of "updateBattStatus" and "BattSOClookup"
   Problem: It is very hard to compare float value of battery SoC with the integer values in the lookup table, if I use for loop to determine the value on by one, it take a lot of time to finish. So the best decision is to use "round" function to converter float to integer so I can compare the calculated SoC with the valued in look-up table. 
+  
+Week 5: Mar 28- April 4 
+- SW-2.2 Function BattCurrCal() --> Determine the charging current of the battery according to the PV generation
+- SW-2.3 Function BattParamCal()--> Determine SOC, DOD, SOH, Temperature, Battery Charging current, Battery Discharging current
+What I've done: Created two functions on arduino to determine the charging current and SOC, DOD and SOH of battery 
+Problem: no problem since the process of these two functions are very similar to the function of "updateBattStatus" so the problem that I found is the same as I found 
+previously.
+
+Week 6: April 4- April 11 
+- SW-3.1 Function UpdateDisplay() --> Update all the calculated values into the LCD screen
+What I've done: Created a function to display charging current aSOC, DOD, SOH Temperature of battery on LCD screen via SPI communication
+Problem: 
+1) There are a lot of conflicts in LCD screen library because different vendors created different library files and command function. So, it took me quite some time to find the library that matches the LDC I brought and make it works.
+2) To update the LCD screen every 2 second, I found that it is more effective to put the "myGLCD.print" function in the void loop than creating a seperated function .This is because there are a lot of variables that needs to be updated in real time.
+3) There is no way to know precisely the coordinate to put my text on the screen. So, I used trial and error to adjust the coordinate, which again, took a lot of time.
+
+ 
+
 
