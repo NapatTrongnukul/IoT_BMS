@@ -41,6 +41,21 @@ Problem:
 2) To update the LCD screen every 2 second, I found that it is more effective to put the "myGLCD.print" function in the void loop than creating a seperated function .This is because there are a lot of variables that needs to be updated in real time.
 3) There is no way to know precisely the coordinate to put my text on the screen. So, I used trial and error to adjust the coordinate, which again, took a lot of time.
 
+Week 7: April 11-April 18
+- Integration Test --> Test all software function and calculation, update LCD display, test LED charge/discharge/warning status. And tried to upload all the data to show on NETPIE/mobilephone
+
+-What I've done: Created interrupt switch function for emegency case. Created LED function status to display the operation mode of the BMS. and finally I tried to connected my BMS with NETPIE but still facing some error.
+
+I've attached videos of integration test with all HW and SW, the green LED means the battery is being discharged (positive current) and the yellow LED means the battery is being charged (negative current). 
+
+Whenever the user press button, the operation will stop immediately, no matter in what status the BMS is operating, and the LCD will show "Operation Teminated by User's Request, Contactor is Opened" 
+
+Problem:
+There is something wrong in the library of "ESP8266_Microgear". The error says "class BearSSL::WiFiClientSecure' has no member named 'verify'". I've searched for the solutions online, many people suggested me to downgrade the version of this library or replace the original "microgear.cpp" file with the one provided in Github.  I've tried every one of them but nothing works. 
+
+Solution: I still couldn't figure out at this moment. But I already sent an email to Prof.Chayakorn for a help. 
+
+
  
 
 
