@@ -55,6 +55,17 @@ There is something wrong in the library of "ESP8266_Microgear". The error says "
 
 Solution: I still couldn't figure out at this moment. But I already sent an email to Prof.Chayakorn for a help. 
 
+Week8: April 18-April 25
+- ESP8266 Microgear Issue -> Last 2 weeks I faced a problem that my arduino IDE could not identify the Microgear library. So, last week I went through a couple of posts on the Arduino society, they suggested me to downgrade the library to be lower than version 1.2.7. I did it and it works fine. 
+
+What I've done --> I've implemented the code to send battery data to display on Netpie, as shown in the picture below
+
+![image](https://user-images.githubusercontent.com/99158019/165026691-a6c09113-c254-4e94-842a-d7d620f94787.png)
+
+As you can see in the picture, the problem is the number of digits is too long, I'm searching for a way to make it shorter
+
+The remaining tasks I have it the emegency button on Netpie, LED indicator and push notification on mobile phone.
+
 
  
 
